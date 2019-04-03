@@ -1,29 +1,29 @@
 html {
     height: 100%;
+    font-family: 'Montserrat';
 
     display: grid;
     align-items: center;
     justify-items: center;
 
-    --bg: #fcfcfc;
+    --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
     --color-headings: #0077FF;
     --color-text: #333333;
 }
 
 html[data-theme='dark'] {
-    
     --bg: #333333;
     --bg-panel: #434343;
     --color-headings: #3694FF;
     --color-text: #B5B5B5;
 }
 
-body{
+body {
     background-color: var(--bg);
 }
 
-.container{
+.container {
     background-color: var(--bg-panel);
     margin: 5em;
     padding: 5em;
@@ -32,22 +32,25 @@ body{
     display: grid;
     grid-template-columns: 80% auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "title switch"
-        "content content" 
+        "content content";
 
-    h1{
+    h1 {
         margin: 0;
         color: var(--color-headings);
     }
 
-    p{
-        color: var(--color-headings);
+    p {
+        color: var(--color-text);
         grid-area: content;
         font-size: 1.1em;
-        margin-top:2em;
+        line-height: 1.8em;
+        margin-top: 2em;
     }
 }
+
+
 
 input[type=checkbox]{
 	height: 0;
@@ -58,10 +61,10 @@ input[type=checkbox]{
 label {
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 200px;
-	height: 100px;
+	width: 52px;
+	height: 27px;
 	background: grey;
-	display: block;
+	float: right;
 	border-radius: 100px;
 	position: relative;
 }
@@ -69,17 +72,17 @@ label {
 label:after {
 	content: '';
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 90px;
-	height: 90px;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
 	background: #fff;
 	border-radius: 90px;
 	transition: 0.3s;
 }
 
 input:checked + label {
-	background:var(--color-headings);
+	background: var(--color-headings);
 }
 
 input:checked + label:after {
@@ -88,21 +91,13 @@ input:checked + label:after {
 }
 
 label:active:after {
-	width: 130px;
-}
-
-// centering
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+	width: 45px;
 }
 
 html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-    transition: all 750ms !important;
-    transition-delay: 0 !important;
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }
