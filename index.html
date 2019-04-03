@@ -7,24 +7,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>DarkModeButton</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Light / Dark Mode</h1>
+        <h1>Dark Mode or Light Mode</h1>
         <div class="toggle-container">
             <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus repellendus dolorem eum consequatur id
-            exercitationem nesciunt, inventore modi perferendis impedit esse, tempora officia, ipsam quae libero.
-            Nostrum, alias dignissimos.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat deserunt magnam exercitationem. Aliquid,
+            deserunt quisquam eos eius architecto itaque quos accusamus repudiandae consectetur dolor assumenda laborum
+            nam saepe! Deleniti, deserunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo amet
+            eveniet voluptatum recusandae labore aspernatur, quidem ullam cumque sint ipsa animi placeat. Rem similique
+            ab quaerat obcaecati doloremque natus? Ad!</p>
     </div>
 
     <script>
-        document.querySelector('input[name=theme]');
+        var checkbox = document.querySelector('input[name=theme]');
 
         checkbox.addEventListener('change', function () {
             if (this.checked) {
@@ -41,7 +43,7 @@
             window.setTimeout(() => {
                 document.documentElement.classList.remove('transition')
             }, 1000)
-        }    
+        }
     </script>
 </body>
 
